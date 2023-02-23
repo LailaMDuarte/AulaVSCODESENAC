@@ -1,99 +1,204 @@
-* { margin: 0;
-    padding: 0;
-    box-sizing: 0;
+
+
+/* barra de navegação */
+.navbar{
+    padding: 2rem;
+    background-color: blue;
 }
 
-.page {
-    display: flex;
-    flex-wrap: wrap;
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
 }
 
-.section{
-    width: 100%;
-    height: 300px;
+/* estilos gerais */
+
+section{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-family: 'Rubik Dirt', cursive; 
+
+}
+
+/*sobre min */
+
+.section-dark{
+    color: white;
+    background-color: blue;
+}
+
+.section-light{
+    color: blue;
+    background-color: white;
+}
+
+.section-title{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Rubik Dirt', cursive;
+    
+}
+
+.section-description{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.section-text{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.text-black{
+    color: blue;
+}
+
+
+
+
+/* section hero */
+
+.hero{
+    background-color: #ffffff;
+    min-height: 450px;
+    text-align: center;
     align-items: center;
 }
 
-.menu {background-color: #5995da;
-    height: 80px;
-}   
-
-.header{
-    background-color: #b2d6ff;
+.hero-principal{
+    padding: 3rem;
 }
 
-.content {
-    background-color: #eaedf0;
-     height: 600px;
+.hero-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    
 }
 
-.sign-up {
-    background-color: #d6e9fe;
+.hero-principal h2{
+    font-size: 1.2rem;
+    color: black;
 }
 
-.feature-1 {
-        background-color: #f5cf8e;
-} 
-
-.feature-2 {
-    background-color: #f09a9d;
+/* continuaçao sobre min */
+.about-me{
+    height: 300px;
+    padding: 20px;
 }
 
-.feature-3 {
-    background-color: #c8c6fa
+.about-me .contanedor{
+    max-width: 600px;
+    text-align: center;
 }
 
-.illustration {
+/*continuacao experience*/
+.experience{
+    padding: 40px;
+}
+
+.experience .column{
+padding: 20px;
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+transition: all 0.2s ease-in;
+}
+
+.experience .column:hover{
+    color: white;
+    background-color: blue;
+}
+
+.experience i{
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgb(7, 7, 82);
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.experience-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.badges-contanedor{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badge{
+    margin: 5px;
+}
+
+.project-recent{
+    padding: 40px;
+}
+
+.project-recent img{
+    height: 100%;
     width: 100%;
+    padding: 10px;
+    border-radius: 10px;
     display: block;
+    transition: all 0.2 ease;
 }
 
-.header{
-    height: auto;
-    justify-content: inherit;
-    align-items: inherit;
+.project-contenedor{
+    padding-top: 60px;
+    margin-bottom: 40px;
 }
 
-.photo img{
-    width: 100%;
-    display: block;
+.overlay{
+    transition: all 0.2 ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.project{
+    position: relative;
+}
+
+.project:hover img{
+    opacity: 0.2;
+}
+
+.project:hover .overlay{
+    opacity: 1;
+}
+
+.overlay .icon-contenedor{
+    display: flex;
+    font-size: 60px;
+    margin: 10px;
 }
 
 
-/*Estilo para Mobile */
-@media only screen and (max-width: 400px){
-     body{background-color: #f09a9d; /*rosa*/}
+/* adaptar - responsivel */
+
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        display: none;
     }
-
-    /* Estilo para Tablet */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-        .sign-up
-        .feature-1,
-        .feature-2,
-        .feature-3 { 
-            width: 50%;}
-    }
-
-    /* Estilo para Desktop */
-@media only screen and (min-width: 961px){
-        
-    .page{
-            width: 960px;
-            margin: 0 auto; }
-    .feature-1,
-    .feature-2, 
-    .feature-3 { 
-        width: 33.3%; }
-
-.header{
-    height: 400px;}
-
-.sign-up {
-        height: 200px;
-        order: 1;
-}
-
-.content{order: 2; }
 }
